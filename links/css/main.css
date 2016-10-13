@@ -1,0 +1,54 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    padding: 1em;
+}
+
+.icon-link {
+    color: #333;
+    
+}
+
+/*Makes it so when you hover over an element, in this case the icon's properties*/
+.icon-link:hover {
+    color: #F00;
+}
+
+.button-link {
+    color: #333;
+    /*Removes the underline from the hyperlink*/
+    text-decoration: none;
+     /*Creates a border for the button*/
+    border-width: 1px;
+    border-style: solid;
+    border-color: #222;
+    /*adds curvature for the edges/corners*/
+    border-radius: 4px;
+    padding: 0.5em 1em;
+    /*em is a unit of measurement refers to the height of the current height*/
+    /*Animates the transition of the hover. fades in and fades out*/
+    transition: all 500ms;
+
+
+}
+.button-link:hover {
+    background-color: #AAA;
+
+}
+
+/*Creates an animaton named fadeIn*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
+
