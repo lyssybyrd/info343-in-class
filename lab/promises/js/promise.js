@@ -13,9 +13,12 @@
       on to the end of the url.
 
   */
- 
- //part 1 code
 
+  var loc = api.openweathermap.org/data/2.5/weather?zip=98105,us;
+  var weather = function() {
+    
+  });
+ 
  /*
   Part 2: Show the difference between parallel and serial promises
 
