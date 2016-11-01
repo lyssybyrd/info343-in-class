@@ -9,9 +9,11 @@ firebase.auth().onAuthStateChanged(function(user) {
     //`user` will be null or a Firebase User object
     if (user) {
         currentUser = user;
+
         
         //set the <span id="user-name"> text content
         //to be the user's .displayName
+        document.getElementById("user-name").textContent = user.displayName;
 
     } else {
         //if the user isn't signed in,
@@ -22,5 +24,6 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 document.getElementById("sign-out-button").addEventListener("click", function() {
     //tell Firebase to sign the current user out...
+    firebase.auth().signOut();
 
 });
