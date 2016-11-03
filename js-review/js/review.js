@@ -100,6 +100,10 @@ function logValue(value, formatter) {
 logValue("2016-10-27", formatAsString);
 logValue("2016-10-27", formatAsDate);
 
+
+logValue(someNumber, formatAsNumber);
+logValue(someNumber, formatAsCurrency);
+console.groupEnd();
 /**
  * PRACTICE
  * call `logValue()` passing a `someNumber` as the first
@@ -189,6 +193,10 @@ console.log("property names:", propNames);
  * If you can't remember what .forEach() look like
  * see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
  */
+
+propNames.forEach(function(xyz) {
+    console.log(xyz + " = " + course[xyz]);
+    });
 
 
 
@@ -351,8 +359,11 @@ console.log("Total count", formatAsNumber(totalCount));
  * just reverse the logic in your compare function.
  */
 
+males.sort(function(r1, r2) {
+    return r2.count-r1.count;
+});
 
-
+// var pop = males.slice(0,10)
 /**
  * PRACTICE
  * There are many names in the BABYNAMES array that
